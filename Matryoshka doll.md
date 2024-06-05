@@ -5,9 +5,7 @@ Description:- Matryoshka dolls are a set of wooden dolls of decreasing size plac
 Downloading the Image, it is a simple photo of a doll, nothing visibly notable.<br>
 Looking at the exif data of the image using:<br>
 <pre>
-...
 exiftool doll.jpg
-...
 </pre>
 we get 
 
