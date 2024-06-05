@@ -1,8 +1,7 @@
 # Informantion:-
 ## [question link](https://play.picoctf.org/practice/challenge/186?category=4&page=1)
-<br>
+## Image: [cat.jpg](https://mercury.picoctf.net/static/b4d62f6e431dc8e563309ea8c33a06b3/cat.jpg)
 **Description:-** Files can always be changed in a secret way. Can you find the flag? <br>
-Image: [cat.jpg](https://mercury.picoctf.net/static/b4d62f6e431dc8e563309ea8c33a06b3/cat.jpg) <br>
 1. Downloading the image we see the photo of a cat.<br>
 2. looking at the metadata of the file using exiftool:
 <pre>
