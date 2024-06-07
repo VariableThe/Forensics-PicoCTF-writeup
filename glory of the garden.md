@@ -1,11 +1,12 @@
 # Glory of the garden:
 ## [question](https://play.picoctf.org/practice/challenge/44?category=4&page=1)
 ## [image](https://jupiter.challenges.picoctf.org/static/4153422e18d40363e7ffc7e15a108683/garden.jpg)
-<br>
-Description:- This garden contains more than it seems.<br>
-<br>
+
+Description: This garden contains more than it seems.
+
 Downloading the image, it is just a photo of a garden.
 Using exiftool:
+
 <pre>
 exiftool garden.jpg
 ExifTool Version Number         : 12.76
@@ -71,8 +72,11 @@ Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
 Image Size                      : 2999x2249
 Megapixels                      : 6.7
 </pre>
-No useful information or anything out of the ordinary.<br>
+
+No useful information or anything out of the ordinary.
+
 Using binwalk to check for additional information:
+
 <pre>
 binwalk garden.jpg
 
@@ -80,18 +84,21 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             JPEG image data, JFIF standard 1.01
 382           0x17E           Copyright string: "Copyright (c) 1998 Hewlett-Packard Company"
-
 </pre>
-Looks normal, nothing out of the ordinary here as well.<br>
-Taking a look at the hint for the question it says: 'What is a hex editor?'<br>
-using hexdump (bad mistake, should have used hexdunp-C instead)<br>
-Gives an incredibly long output of gibberish.<br>
-using strings command and grep to find 'picoCTF' as the flag contains picoCTF:<br>
+
+Looks normal, nothing out of the ordinary here as well.
+
+Taking a look at the hint for the question it says: 'What is a hex editor?'
+Using hexdump (bad mistake, should have used hexdump -C instead)
+Gives an incredibly long output of gibberish.
+Using strings command and grep to find 'picoCTF' as the flag contains picoCTF:
+
 <pre>
 strings garden.jpg | grep 'picoCTF'
 Here is a flag "picoCTF{more_than_m33ts_the_3y33dd2eEF5}"
 </pre>
-We get a hit and it returns the flag<br>
-Submitting 'picoCTF{more_than_m33ts_the_3y33dd2eEF5}' works and is accepted.<br>
-**P.S. I had the opportunity to look at other writeups, until now I've only written about what has worked, but I will now also be including everything I try including the massive failures :)**
 
+We get a hit and it returns the flag.
+Submitting 'picoCTF{more_than_m33ts_the_3y33dd2eEF5}' works and is accepted.
+
+**P.S. I had the opportunity to look at other writeups, until now I've only written about what has worked, but I will now also be including everything I try including the massive failures :)**
