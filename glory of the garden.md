@@ -88,9 +88,9 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 Looks normal, nothing out of the ordinary here as well.
 
-Taking a look at the hint for the question it says: 'What is a hex editor?'
-Using hexdump (bad mistake, should have used hexdump -C instead)
-Gives an incredibly long output of gibberish.
+Taking a look at the hint for the question it says: 'What is a hex editor?'<br>
+Using hexdump (bad mistake, should have used hexdump -C instead)<br>
+Gives an incredibly long output of gibberish.<br>
 Using strings command and grep to find 'picoCTF' as the flag contains picoCTF:
 
 <pre>
